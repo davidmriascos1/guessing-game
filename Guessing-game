@@ -1,0 +1,19 @@
+function playGame() {
+  // Generate a random number between 1 and 10
+  var randomNumber = Math.floor(Math.random() * 10) + 1;
+
+  // Ask the user to guess a number
+  var userGuess = prompt("Guess a number between 1 and 10:");
+
+  // Check if the user's guess is correct
+  if (userGuess == randomNumber) {
+    alert("You won! The correct number was " + randomNumber);
+  } else {
+    alert("Sorry, you lost. The correct number was " + randomNumber);
+  }
+}
+
+// Play the game repeatedly until the user chooses to stop
+while (confirm("Do you want to play again?")) {
+  playGame();
+}
